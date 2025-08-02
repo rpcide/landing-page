@@ -1,0 +1,11 @@
+---
+import Container from "./Container.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="text-primary-alt text-sm py-10">
+  <Container className="flex justify-between items-center">
+    <p>© {currentYear} Andres Parra All rights reserved.</p>
+  </Container>
+</footer>

@@ -1,7 +1,9 @@
 ---
+import CTA from "@/components/sections/CTA.astro";
 import Features from "@/components/sections/Features.astro";
 import Hero from "@/components/sections/Hero.astro";
 import Languages from "@/components/sections/Languages.astro";
+import PreviewEditor from "@/components/sections/PreviewEditor.astro";
 import Layout from "../../layouts/Layout.astro";
 
 export function getStaticPaths() {
@@ -18,11 +20,13 @@ const { lang } = Astro.params;
 <Layout
   title="RPCIDE"
   description="RPCIDE is a platform for developers to create and share RPC interfaces."
-  className="max-w-full !px-0"
+  className="max-w-full !px-0 !mb-0"
 >
-  <div class="">
+  <div>
     <Hero />
     <Features />
+    <PreviewEditor />
     <Languages />
+    <CTA />
   </div>
 </Layout>

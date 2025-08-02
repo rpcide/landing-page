@@ -1,5 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { LanguageToggle } from "./LanguageToggle";
 import { ModeToggle } from "./ModeToggle";
 import { Button } from "./ui/button";
 
@@ -26,6 +27,9 @@ const t = useTranslations(lang);
         <a href="https://rpcide.cloud" target="_blank">
           <Button>{t("nav.login")}</Button>
         </a>
+      </li>
+      <li>
+        <LanguageToggle lang={lang} client:load />
       </li>
       <li>
         <ModeToggle client:load />

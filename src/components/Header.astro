@@ -1,0 +1,35 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { ModeToggle } from "./ModeToggle";
+import { Button } from "./ui/button";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<header class="flex justify-between items-center p-4">
+  <a href="/" class="flex items-center space-x-2">
+    <img
+      src="https://rpcide.cloud/logo_rpcide.svg"
+      alt="Logo"
+      class="h-6 w-6"
+    />
+    <h1 class="text-lg font-semibold">{t("title")}</h1>
+  </a>
+
+  <nav>
+    <ul class="flex items-center space-x-4">
+      <li><a href="#features">{t("nav.features")}</a></li>
+      <li><a href="#languages">{t("nav.languages")}</a></li>
+      <li><a href="#community">{t("nav.community")}</a></li>
+      <li>
+        <a href="https://rpcide.cloud" target="_blank">
+          <Button>{t("nav.login")}</Button>
+        </a>
+      </li>
+      <li>
+        <ModeToggle client:load />
+      </li>
+    </ul>
+  </nav>
+</header>

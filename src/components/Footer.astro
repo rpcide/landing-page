@@ -1,11 +1,140 @@
 ---
-import Container from "./Container.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { LanguageToggle } from "./LanguageToggle";
+import Link from "./Link.astro";
+import { ModeToggle } from "./ModeToggle";
 
 const currentYear = new Date().getFullYear();
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<footer class="text-primary-alt text-sm py-10">
-  <Container className="flex justify-between items-center">
-    <p>© {currentYear} Andres Parra All rights reserved.</p>
-  </Container>
+<footer
+  class="relative z-10 px-4 py-12 border-t border-white/5 backdrop-blur-sm"
+>
+  <div class="container mx-auto max-w-6xl">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="space-y-4">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center">
+            <img
+              src="https://rpcide.cloud/logo_rpcide.svg"
+              alt="Logo"
+              class="h-6 w-6"
+            />
+          </div>
+          <span class="text-xl font-bold">RPCIDE</span>
+        </div>
+        <p class="text-muted-foreground text-sm">
+          {t("description")}
+        </p>
+
+        <div class="flex items-center gap-2 relative z-[1]">
+          <LanguageToggle lang={lang} client:load />
+          <ModeToggle client:load />
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-4">{t("footer.product")}</h3>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li>
+            <Link
+              href="/features"
+              className="transition-colors"
+            >
+              {t("footer.product.features")}
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/pricing"
+              className="transition-colors"
+            >
+              {t("footer.product.pricing")}
+            </Link>
+          </li>
+          <li>
+            <Link href="/api" className=" transition-colors">
+              {t("footer.product.api")}
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/documentation"
+              className=" transition-colors"
+            >
+              {t("footer.product.documentation")}
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-4">{t("footer.community")}</h3>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li>
+            <a
+              href="https://discord.gg/rpcide"
+              class=" transition-colors"
+            >
+              Discord
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/rpcide"
+              class=" transition-colors"
+            >
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://blog.rpcide.cloud"
+              class=" transition-colors"
+            >
+              Blog
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-4">{t("footer.support")}</h3>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li>
+            <Link
+              href="/contact"
+              className=" transition-colors"
+            >
+              {t("footer.support.contact")}
+            </Link>
+          </li>
+          <li>
+            <Link href="/status" className=" transition-colors">
+              {t("footer.support.status")}
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/privacy"
+              className=" transition-colors"
+            >
+              {t("footer.support.privacy")}
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="border-t border-white/5 mt-12 pt-8 text-center text-sm text-gray-500"
+    >
+      <p>
+        &copy; {new Date().getFullYear()}
+        {t("footer.copyright")}
+      </p>
+    </div>
+  </div>
 </footer>

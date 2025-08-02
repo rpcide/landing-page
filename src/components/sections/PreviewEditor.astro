@@ -1,0 +1,130 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { Play } from "@lucide/astro";
+import { Button } from "../ui/button";
+import { Card } from "../ui/card";
+import AnimatedBackground from "../AnimatedBackground";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="pt-40 relative">
+  <div class="relative top-[-150px] inset-0 w-full h-[calc(100vh+150px)]">
+    <AnimatedBackground />
+
+    <div class="container mx-auto max-w-6xl pt-30">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          {t("preview.title")}
+        </h2>
+        <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+          {t("preview.subtitle")}
+        </p>
+      </div>
+
+      <div class="relative">
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-purple-600/10 rounded-2xl blur-3xl"
+        >
+        </div>
+        <Card
+          className="relative border-purple-500/10 backdrop-blur-sm overflow-hidden shadow-2xl shadow-purple-500/20"
+          style={{ backgroundColor: "#080808" }}
+        >
+          <div
+            class="flex items-center gap-2 px-4 py-3 border-b border-white/5"
+          >
+            <div class="flex gap-2">
+              <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+            </div>
+            <div class="flex-1 text-center">
+              <span class="text-sm text-gray-500"
+                >main.cpp - Two Sum Problem</span
+              >
+            </div>
+          </div>
+          <div class="p-6 font-mono text-sm">
+            <div class="text-gray-300">
+              <div class="text-green-400">#include {"<iostream>"}</div>
+              <div class="text-green-400">#include {"<vector>"}</div>
+              <div class="text-green-400">#include {"<unordered_map>"}</div>
+              <div class="mt-4 text-blue-400">using namespace std;</div>
+              <div class="mt-4">
+                <span class="text-purple-400">vector</span>
+                <span class="text-gray-300">{"<int>"} </span>
+                <span class="text-yellow-400">twoSum</span>
+                <span class="text-gray-300">(</span>
+                <span class="text-purple-400">vector</span>
+                <span class="text-gray-300">{"<int>"}& nums, </span>
+                <span class="text-purple-400">int</span>
+                <span class="text-gray-300"> target) {"{"}</span>
+              </div>
+              <div class="ml-4">
+                <div class="text-purple-400">
+                  unordered_map<span class="text-gray-300"
+                    >{"<int, int>"} map;</span
+                  >
+                </div>
+                <div class="mt-2 text-purple-400">
+                  for <span class="text-gray-300">(</span>
+                  <span class="text-purple-400">int</span>
+                  <span class="text-gray-300">
+                    {" "}
+                    i = 0; i {"< nums.size()"}; i++) {"{"}
+                  </span>
+                </div>
+                <div class="ml-4">
+                  <div class="text-purple-400">
+                    int <span class="text-gray-300"
+                      >complement = target - nums[i];</span
+                    >
+                  </div>
+                  <div class="text-purple-400">
+                    if <span class="text-gray-300"
+                      >(map.find(complement) != map.end()) {"{"}</span
+                    >
+                  </div>
+                  <div class="ml-4 text-purple-400">
+                    return{" "}
+                    <span class="text-gray-300">
+                      {"{"} map[complement], i {"}"};
+                    </span>
+                  </div>
+                  <div class="text-gray-300">{"}"}</div>
+                  <div class="text-gray-300">map[nums[i]] = i;</div>
+                </div>
+                <div class="text-gray-300">{"}"}</div>
+                <div class="text-purple-400">
+                  return <span class="text-gray-300">{"{}"};</span>
+                </div>
+              </div>
+              <div class="text-gray-300">{"}"}</div>
+            </div>
+          </div>
+          <div
+            class="px-6 py-4 border-t border-white/5"
+            style={{ backgroundColor: "#060606" }}
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-4 text-sm text-gray-500">
+                <span class="flex items-center gap-1">
+                  <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                  Compiled Successfully
+                </span>
+                <span>Runtime: 4ms</span>
+                <span>Memory: 10.2MB</span>
+              </div>
+              <Button size="sm" className="bg-green-600 hover:bg-green-700">
+                <Play class="w-4 h-4 mr-1" />
+                Run Tests
+              </Button>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </div>
+  </div>
+</section>

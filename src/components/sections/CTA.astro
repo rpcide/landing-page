@@ -22,18 +22,14 @@ const t = useTranslations(lang);
       <div
         class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
       >
-        <Button
-          className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300"
-        >
-          <ArrowRight class="w-5 h-5" />
-          {t("cta.button")}
-        </Button>
-        <Button
-          variant="outline"
-          className="border bg-card text-foreground hover:bg-white/5 px-8 py-3 hover:border-purple-500/30 transition-all duration-300"
-        >
-          {t("cta.demo")}
-        </Button>
+        <a href="https://app.rpcide.cloud" target="_blank">
+          <Button
+            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300"
+          >
+            <ArrowRight class="w-5 h-5" />
+            {t("cta.button")}
+          </Button>
+        </a>
       </div>
     </div>
   </div>

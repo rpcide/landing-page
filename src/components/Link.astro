@@ -1,0 +1,18 @@
+---
+import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
+
+interface Props {
+  href: string;
+  target?: string;
+  className?: string;
+}
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+
+const { href, target, className } = Astro.props;
+---
+
+<a href={translatePath(href)} target={target} class={`${className}`}>
+  <slot />
+</a>

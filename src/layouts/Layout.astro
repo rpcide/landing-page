@@ -2,6 +2,7 @@
 interface Props {
   title: string;
   description: string;
+  className?: string;
   cover?: string | null;
 }
 
@@ -11,7 +12,7 @@ import Header from "../components/Header.astro";
 import "../global.css";
 import { getLangFromUrl, getLocaleFromLang } from "../i18n/utils";
 
-const { title, description, cover } = Astro.props;
+const { title, description, cover, className } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const locale = getLocaleFromLang(lang);
 
@@ -99,7 +100,7 @@ const alternateLinks = [
 
   <body>
     <Header />
-    <Container className="mb-20">
+    <Container className={`mb-20 ${className}`}>
       <slot />
     </Container>
     <Footer />

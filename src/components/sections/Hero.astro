@@ -1,7 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { Circle, Play, Sparkles, Trophy, Users } from "@lucide/astro";
-import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 
 const lang = getLangFromUrl(Astro.url);
@@ -11,22 +10,28 @@ const t = useTranslations(lang);
 <section
   class="pt-20 pb-40 flex flex-col items-center justify-center text-center space-y-10 h-full min-h-[calc(100vh-4rem)]"
 >
-  <Badge>
-    <Sparkles />
-    <span>{t("hero.slogan")}</span>
-  </Badge>
+  <div
+    class="bg-primary/10 border-primary text-purple-300 px-4 rounded-full text-xs font-bold flex items-center space-x-2"
+  >
+      <Sparkles width={16} />
+      <span>{t("hero.slogan")}</span>
+  </div>
 
   <h1 class="text-5xl font-bold">{t("hero.title")}</h1>
   <p class="text-lg text-muted-foreground md:px-8">{t("hero.subtitle")}</p>
 
   <a href="https://rpcide.cloud" target="_blank" class="mt-4 mb-20">
-    <Button className="flex items-center">
+    <Button
+      className="flex items-center shadow-2xl shadow-purple-700 hover:shadow-none"
+    >
       <Play />
       <span class="text-md">{t("hero.cta")}</span>
     </Button>
   </a>
 
-  <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 text-sm text-muted-foreground">
+  <div
+    class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 text-sm text-muted-foreground"
+  >
     <span class="inline-flex items-center space-x-2">
       <Circle class="w-2 text-green-600 fill-green-600" />
       <span>{t("hero.live")}</span>

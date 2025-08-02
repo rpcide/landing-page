@@ -1,0 +1,14 @@
+---
+const { title, description } = Astro.props;
+---
+
+<article class="bg-card border rounded-lg p-6">
+  <div
+    class="rounded bg-primary text-primary-foreground w-12 h-12 shadow-2xl shadow-purple-700 dark:shadow-purple-400 grid place-items-center mb-4 "
+  >
+    <slot />
+  </div>
+
+  <h3 class="font-bold text-lg mb-1">{title}</h3>
+  <p class="text-muted-foreground">{description}</p>
+</article>

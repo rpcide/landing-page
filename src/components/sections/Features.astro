@@ -1,0 +1,88 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { Code, Star, Target } from "@lucide/astro";
+import Container from "../Container.astro";
+import CardFeature from "./CardFeature.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const features = [
+  {
+    en: {
+      title: "Fast and Reliable",
+      description:
+        "Experience lightning-fast performance with our optimized platform.",
+    },
+    es: {
+      title: "Rápido y Confiable",
+      description:
+        "Experimenta un rendimiento ultrarrápido con nuestra plataforma optimizada.",
+    },
+    pt: {
+      title: "Rápido e Confiável",
+      description:
+        "Experimente um desempenho ultrarrápido com nossa plataforma otimizada.",
+    },
+    icon: Star,
+  },
+  {
+    en: {
+      title: "Smart Testing",
+      description:
+        "Automated test case validation to ensure your solutions are bulletproof.",
+    },
+    es: {
+      title: "Pruebas Inteligentes",
+      description:
+        "Validación automatizada de casos de prueba para garantizar que tus soluciones sean a prueba de balas.",
+    },
+    pt: {
+      title: "Teste Inteligente",
+      description:
+        "Validação automatizada de casos de teste para garantir que suas soluções sejam à prova de balas.",
+    },
+    icon: Target,
+  },
+  {
+    en: {
+      title: "Multi-Language Support",
+      description:
+        "Support for C++, Java, Python, JavaScript, Go, and more with intelligent syntax highlighting.",
+    },
+    es: {
+      title: "Soporte Multilenguaje",
+      description:
+        "Compatibilidad con C++, Java, Python, JavaScript, Go y más con resaltado de sintaxis inteligente.",
+    },
+    pt: {
+      title: "Suporte Multilíngue",
+      description:
+        "Suporte para C++, Java, Python, JavaScript, Go e mais com realce de sintaxe inteligente.",
+    },
+    icon: Code,
+  },
+];
+---
+
+<section id="features">
+  <Container className="space-y-20">
+    <div class="text-center space-y-4">
+      <h2 class="text-3xl font-bold">{t("features.title")}</h2>
+      <p class="text-lg text-muted-foreground">{t("features.subtitle")}</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        features.map((feature) => (
+          <CardFeature
+            title={feature[lang].title}
+            description={feature[lang].description}
+          >
+            <feature.icon />
+          </CardFeature>
+        ))
+      }
+    </div>
+  </Container>
+</section>

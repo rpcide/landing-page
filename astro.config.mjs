@@ -22,7 +22,6 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
-      filenameBase: "sitemap",
       i18n: {
         defaultLocale: "en",
         locales: {

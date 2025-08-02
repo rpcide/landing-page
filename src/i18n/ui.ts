@@ -18,6 +18,10 @@ export const ui = {
     languages: "Languages",
     mode: "Mode",
     "mode.light": "Light",
+    "hero.title": "Code, Compete, Conquer",
+    "hero.slogan": "The Future of Competitive Programming",
+    "hero.subtitle": "The ultimate online code editor designed for competitive programming. Practice, learn, and excel with powerful tools and real-time collaboration.",
+    "hero.cta": "Start Coding",
   },
   es: {
     title: "RPCIDE",
@@ -29,6 +33,10 @@ export const ui = {
     languages: "Idiomas",
     mode: "Modo",
     "mode.light": "Claro",
+    "hero.title": "Codifica, Compite, Conquista",
+    "hero.slogan": "El Futuro de la Programación Competitiva",
+    "hero.subtitle": "El editor de código en línea definitivo diseñado para la programación competitiva. Practica, aprende y destaca con herramientas poderosas y colaboración en tiempo real.",
+    "hero.cta": "Comienza a Codificar",
   },
   pt: {
     title: "RPCIDE",
@@ -40,5 +48,9 @@ export const ui = {
     languages: "Idiomas",
     mode: "Modo",
     "mode.light": "Claro",
+    "hero.title": "Codifique, Compita, Conquiste",
+    "hero.slogan": "O Futuro da Programação Competitiva",
+    "hero.subtitle": "O editor de código online definitivo projetado para programação competitiva. Pratique, aprenda e se destaque com ferramentas poderosas e colaboração em tempo real.",
+    "hero.cta": "Comece a Codificar",
   },
 } as const;

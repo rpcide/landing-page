@@ -1,4 +1,5 @@
 ---
+import Hero from "@/components/sections/Hero.astro";
 import Layout from "../../layouts/Layout.astro";
 
 export function getStaticPaths() {
@@ -16,5 +17,5 @@ const { lang } = Astro.params;
   title="RPCIDE"
   description="RPCIDE is a platform for developers to create and share RPC interfaces."
 >
-  <h1>Welcome to the Language Page {lang}</h1>
+  <Hero />
 </Layout>

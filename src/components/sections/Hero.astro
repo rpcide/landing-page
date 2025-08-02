@@ -1,0 +1,28 @@
+---
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import { Play, Sparkles } from "@lucide/astro";
+import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section
+  class="py-20 flex flex-col items-center justify-center text-center space-y-10"
+>
+  <Badge>
+    <Sparkles />
+    <span>{t("hero.slogan")}</span>
+  </Badge>
+
+  <h1 class="text-5xl font-bold">{t("hero.title")}</h1>
+  <p class="text-lg text-muted-foreground px-8">{t("hero.subtitle")}</p>
+
+  <a href="https://rpcide.cloud">
+    <Button className="flex items-center">
+      <Play />
+      <span class="text-md">{t("hero.cta")}</span>
+    </Button>
+  </a>
+</section>

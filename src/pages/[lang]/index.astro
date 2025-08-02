@@ -4,6 +4,7 @@ import Features from "@/components/sections/Features.astro";
 import Hero from "@/components/sections/Hero.astro";
 import Languages from "@/components/sections/Languages.astro";
 import PreviewEditor from "@/components/sections/PreviewEditor.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import Layout from "../../layouts/Layout.astro";
 
 export function getStaticPaths() {
@@ -14,12 +15,13 @@ export function getStaticPaths() {
   ];
 }
 
-const { lang } = Astro.params;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Layout
-  title="RPCIDE"
-  description="RPCIDE is a platform for developers to create and share RPC interfaces."
+  title={t("title")}
+  description={t("description")}
   className="max-w-full !px-0 !mb-0"
 >
   <div>

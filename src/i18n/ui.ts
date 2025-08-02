@@ -9,7 +9,7 @@ export const showDefaultLang = true;
 
 export const ui = {
   en: {
-    title: "RPCIDE",
+    title: "Online Competitive Programming IDE",
     description:
       "The ultimate platform for competitive programming and algorithmic problem solving.",
     "nav.home": "Home",
@@ -60,7 +60,7 @@ export const ui = {
       "RPCIDE. All rights reserved. Built for competitive programmers, by competitive programmers.",
   },
   es: {
-    title: "RPCIDE",
+    title: "Online IDE de Programación Competitiva",
     description:
       "La plataforma definitiva para la programación competitiva y la resolución de problemas algorítmicos.",
     "nav.home": "Inicio",
@@ -111,7 +111,7 @@ export const ui = {
       "RPCIDE. Todos los derechos reservados. Construido para programadores competitivos, por programadores competitivos.",
   },
   pt: {
-    title: "RPCIDE",
+    title: "IDE de Programação Competitiva Online",
     description:
       "A plataforma definitiva para programação competitiva e resolução de problemas algorítmicos.",
     "nav.home": "Início",

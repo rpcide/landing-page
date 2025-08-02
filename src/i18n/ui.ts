@@ -28,6 +28,9 @@ export const ui = {
     "hero.free": "Free Forever",
     "features.title": "Built for Champions",
     "features.subtitle": "Every feature designed to give you the competitive edge you need.",
+    "languages.title": " Your Language, Your Choice",
+    "languages.subtitle": "Code in your preferred language with full support and optimization.",
+    "languages.cta": "Explore Languages",
   },
   es: {
     title: "RPCIDE",
@@ -49,6 +52,9 @@ export const ui = {
     "hero.free": "Gratis para Siempre",
     "features.title": "Diseñado para Campeones",
     "features.subtitle": "Cada característica diseñada para darte la ventaja competitiva que necesitas.",
+    "languages.title": "Tu Lenguaje, Tu Elección",
+    "languages.subtitle": "Programa en tu lenguaje preferido con soporte y optimización completa.",
+    "languages.cta": "Explora Idiomas",
   },
   pt: {
     title: "RPCIDE",
@@ -70,5 +76,8 @@ export const ui = {
     "hero.free": "Grátis para Sempre",
     "features.title": "Feito para Campeões",
     "features.subtitle": "Cada recurso projetado para lhe dar a vantagem competitiva que você precisa.",
+    "languages.title": "Sua Linguagem, Sua Escolha",
+    "languages.subtitle": "Codifique em sua linguagem preferida com suporte e otimização completos.",
+    "languages.cta": "Explore Idiomas",
   },
 } as const;

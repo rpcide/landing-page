@@ -1,6 +1,7 @@
 ---
 import Features from "@/components/sections/Features.astro";
 import Hero from "@/components/sections/Hero.astro";
+import Languages from "@/components/sections/Languages.astro";
 import Layout from "../../layouts/Layout.astro";
 
 export function getStaticPaths() {
@@ -22,5 +23,6 @@ const { lang } = Astro.params;
   <div class="">
     <Hero />
     <Features />
+    <Languages />
   </div>
 </Layout>

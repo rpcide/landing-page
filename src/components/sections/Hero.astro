@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
-import { Play, Sparkles } from "@lucide/astro";
+import { Circle, Play, Sparkles, Trophy, Users } from "@lucide/astro";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 
@@ -9,7 +9,7 @@ const t = useTranslations(lang);
 ---
 
 <section
-  class="py-20 flex flex-col items-center justify-center text-center space-y-10"
+  class="pt-20 pb-40 flex flex-col items-center justify-center text-center space-y-10 h-full min-h-[calc(100vh-4rem)]"
 >
   <Badge>
     <Sparkles />
@@ -17,12 +17,29 @@ const t = useTranslations(lang);
   </Badge>
 
   <h1 class="text-5xl font-bold">{t("hero.title")}</h1>
-  <p class="text-lg text-muted-foreground px-8">{t("hero.subtitle")}</p>
+  <p class="text-lg text-muted-foreground md:px-8">{t("hero.subtitle")}</p>
 
-  <a href="https://rpcide.cloud">
+  <a href="https://rpcide.cloud" target="_blank" class="mt-4 mb-20">
     <Button className="flex items-center">
       <Play />
       <span class="text-md">{t("hero.cta")}</span>
     </Button>
   </a>
+
+  <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 text-sm text-muted-foreground">
+    <span class="inline-flex items-center space-x-2">
+      <Circle class="w-2 text-green-600 fill-green-600" />
+      <span>{t("hero.live")}</span>
+    </span>
+
+    <span class="inline-flex items-center space-x-2">
+      <Users class="w-4" />
+      <span>+400 {t("hero.users")}</span>
+    </span>
+
+    <span class="inline-flex items-center space-x-2">
+      <Trophy class="w-4" />
+      <span>{t("hero.free")}</span>
+    </span>
+  </div>
 </section>

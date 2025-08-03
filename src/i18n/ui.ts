@@ -70,11 +70,11 @@ export const ui = {
     languages: "Idiomas",
     mode: "Modo",
     "mode.light": "Claro",
-    "hero.title": "Codifica, Compite, Conquista",
+    "hero.title": "Programa, Compite, Conquista",
     "hero.slogan": "El Futuro de la Programación Competitiva",
     "hero.subtitle":
       "El editor de código en línea definitivo diseñado para la programación competitiva. Practica, aprende y destaca con herramientas poderosas y colaboración en tiempo real.",
-    "hero.cta": "Comienza a Codificar",
+    "hero.cta": "Comienza a Programar",
     "hero.live": "En Vivo y Listo",
     "hero.version": "Versión",
     "hero.users": "Usuarios",

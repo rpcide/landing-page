@@ -1,5 +1,6 @@
 ---
 import config from "@/config";
+import { LogIn } from "@lucide/astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { LanguageToggle } from "./LanguageToggle";
 import { Button } from "./ui/button";
@@ -32,10 +33,13 @@ const appUrl = config.appUrl;
   </nav>
 
   <nav class="md:hidden">
-    <ul class="flex items-center space-x-4 text-sm text-muted-foreground">
+    <ul class="flex items-center space-x-2 text-sm text-muted-foreground">
       <li>
         <a href={appUrl} target="_blank">
-          <Button>{t("nav.login")}</Button>
+          <Button>
+            <LogIn />
+            {t("nav.login")}
+          </Button>
         </a>
       </li>
       <li>

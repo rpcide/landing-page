@@ -64,7 +64,7 @@ export const ui = {
       "La plataforma definitiva para la programación competitiva y la resolución de problemas algorítmicos.",
     "nav.home": "Inicio",
     "nav.features": "Características",
-    "nav.languages": "Idiomas",
+    "nav.languages": "Lenguajes",
     "nav.community": "Comunidad",
     "nav.login": "Iniciar sesión",
     languages: "Idiomas",

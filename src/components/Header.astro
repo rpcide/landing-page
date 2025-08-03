@@ -1,39 +1,47 @@
 ---
+import config from "@/config";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { LanguageToggle } from "./LanguageToggle";
-import { ModeToggle } from "./ModeToggle";
 import { Button } from "./ui/button";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const appUrl = config.appUrl;
 ---
 
 <header class="relative z-20 flex justify-between items-center p-4">
   <a href="/" class="flex items-center space-x-2">
-    <img
-      src="/logo.png"
-      alt="Logo RPCIDE"
-      class="h-8 w-6"
-    />
+    <img src="/logo.png" alt="Logo RPCIDE" class="h-8 w-6" />
     <h1 class="text-lg font-bold">RPCIDE</h1>
   </a>
 
-  <nav>
+  <nav class="hidden md:block">
     <ul class="flex items-center space-x-4 text-sm text-muted-foreground">
       <li><a href="#features">{t("nav.features")}</a></li>
       <li><a href="#languages">{t("nav.languages")}</a></li>
       <li><a href="#community">{t("nav.community")}</a></li>
       <li>
-        <a href="https://app.rpcide.cloud" target="_blank">
+        <a href={appUrl} target="_blank">
           <Button>{t("nav.login")}</Button>
         </a>
       </li>
       <li>
         <LanguageToggle lang={lang} client:load />
       </li>
-      <!-- <li>
-        <ModeToggle client:load />
-      </li> -->
+    </ul>
+  </nav>
+
+  <nav class="md:hidden">
+    <ul class="flex items-center space-x-4 text-sm text-muted-foreground">
+      <li>
+        <a href={appUrl} target="_blank">
+          <Button>{t("nav.login")}</Button>
+        </a>
+      </li>
+      <li>
+        <LanguageToggle lang={lang} client:load />
+      </li>
     </ul>
   </nav>
 </header>

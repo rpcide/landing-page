@@ -8,7 +8,8 @@ const t = useTranslations(lang);
 ---
 
 <section
-  class="px-4 py-30 bg-gradient-to-r from-purple-600/5 to-purple-700/5 backdrop-blur-sm relative"
+  id="cta"
+  class="px-4 pt-20 pb-60 bg-gradient-to-r from-purple-600/5 to-purple-700/5 backdrop-blur-sm relative"
 >
   <div class="container mx-auto max-w-2xl text-center">
     <div class="space-y-6">
@@ -34,3 +35,13 @@ const t = useTranslations(lang);
     </div>
   </div>
 </section>
+
+<style>
+  section#cta {
+    background: radial-gradient(
+      125% 125% at 50% 10%,
+      var(--color-background) 40%,
+      #2b092b 100%
+    );
+  }
+</style>

@@ -1,4 +1,5 @@
 ---
+import config from "@/config";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { Circle, Play, Sparkles, Users } from "@lucide/astro";
 import AnimatedBackground from "../AnimatedBackground";
@@ -6,6 +7,8 @@ import { Button } from "../ui/button";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const appUrl = config.appUrl;
 ---
 
 <div class="hero">
@@ -28,7 +31,7 @@ const t = useTranslations(lang);
           {t("hero.subtitle")}
         </p>
 
-        <a href="https://app.rpcide.cloud" target="_blank" class="mt-4 mb-20">
+        <a href={appUrl} target="_blank" class="mt-4 mb-20">
           <Button
             className="flex items-center shadow-2xl shadow-purple-700 hover:shadow-none"
           >

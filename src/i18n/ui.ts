@@ -28,7 +28,6 @@ export const ui = {
     "hero.live": "Live & Ready",
     "hero.version": "Version",
     "hero.users": "Users",
-    "hero.free": "Free Forever",
     "features.title": "Built for Champions",
     "features.subtitle":
       "Every feature designed to give you the competitive edge you need.",
@@ -79,7 +78,6 @@ export const ui = {
     "hero.live": "En Vivo y Listo",
     "hero.version": "Versión",
     "hero.users": "Usuarios",
-    "hero.free": "Gratis para Siempre",
     "features.title": "Diseñado para Campeones",
     "features.subtitle":
       "Cada característica diseñada para darte la ventaja competitiva que necesitas.",
@@ -130,7 +128,6 @@ export const ui = {
     "hero.live": "Ao Vivo e Pronto",
     "hero.version": "Versão",
     "hero.users": "Usuários",
-    "hero.free": "Grátis para Sempre",
     "features.title": "Feito para Campeões",
     "features.subtitle":
       "Cada recurso projetado para lhe dar a vantagem competitiva que você precisa.",

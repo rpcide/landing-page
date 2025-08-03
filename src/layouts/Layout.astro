@@ -24,7 +24,7 @@ const alternateLinks = [
 ];
 ---
 
-<html lang={lang}>
+<html lang={lang} class="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="author" content="Andres Parra" />
@@ -70,7 +70,7 @@ const alternateLinks = [
         <link rel="alternate" href={link.href} hreflang={link.hreflang} />
       ))
     }
-
+<!-- 
     <script is:inline>
       const getThemePreference = () => {
         if (
@@ -96,7 +96,7 @@ const alternateLinks = [
           attributeFilter: ["class"],
         });
       }
-    </script>
+    </script> -->
   </head>
 
   <body>

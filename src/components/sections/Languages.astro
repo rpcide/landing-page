@@ -6,23 +6,21 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const languages = [
-  { name: "C", icon: "⚡", color: "bg-purple-600" },
-  { name: "C++", icon: "⚡", color: "bg-purple-600" },
-  { name: "Java", icon: "☕", color: "bg-purple-600" },
-  { name: "Python", icon: "🐍", color: "bg-purple-600" },
-  { name: "JavaScript", icon: "🟨", color: "bg-purple-600" },
-  { name: "Go", icon: "🔵", color: "bg-purple-600" },
-  // { name: "Rust", icon: "🦀", color: "bg-purple-600" },
-  { name: "C#", icon: "💜", color: "bg-purple-600" },
-  // { name: "Kotlin", icon: "🟣", color: "bg-purple-600" },
-  // { name: "Swift", icon: "🧡", color: "bg-purple-600" },
-  // { name: "Ruby", icon: "💎", color: "bg-purple-600" },
-  // { name: "PHP", icon: "🐘", color: "bg-purple-600" },
-  // { name: "Scala", icon: "🔴", color: "bg-purple-600" },
+  { name: "C", icon: "/assets/c.png", color: "bg-purple-800" },
+  { name: "C++", icon: "/assets/cplus.png", color: "bg-purple-800" },
+  { name: "Java", icon: "/assets/java.png", color: "bg-purple-800" },
+  { name: "Python", icon: "/assets/python.png", color: "bg-purple-800" },
+  {
+    name: "JavaScript",
+    icon: "/assets/javascript.png",
+    color: "bg-purple-800",
+  },
+  { name: "Go", icon: "/assets/golang.png", color: "bg-purple-800" },
+  { name: "C#", icon: "/assets/csharp.png", color: "bg-purple-800" },
 ];
 ---
 
-<section id="languages" class="px-4 pt-10 pb-40 relative">
+<section id="languages" class="px-4 pt-40 pb-40 relative">
   <div class="container mx-auto max-w-6xl">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">
@@ -42,10 +40,15 @@ const languages = [
           >
             <CardContent className="p-6 text-center">
               <div
-                class={`w-12 h-12 ${lang.color} rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform text-xl shadow-lg shadow-purple-500/20`}
+                class={`w-12 h-12 ${lang.color} rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform text-xl shadow-2xl shadow-purple-500`}
               >
-                {lang.icon}
+                <img
+                  src={lang.icon}
+                  alt={`${lang.name} icon`}
+                  class="w-8 h-8"
+                />
               </div>
+
               <h3 class="font-semibold">{lang.name}</h3>
             </CardContent>
           </Card>

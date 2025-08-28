@@ -1,4 +1,6 @@
 ---
+export const prerender = false;
+
 const { slug } = Astro.params;
 
 return Astro.redirect(`https://app.rpcide.cloud/shared/${slug}`);

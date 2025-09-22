@@ -52,11 +52,24 @@ export const ui = {
     "footer.community.blog": "Blog",
     "footer.community.forum": "Forum",
     "footer.support": "Support",
+    "footer.support.about": "About",
     "footer.support.contact": "Contact",
     "footer.support.status": "Status",
     "footer.support.privacy": "Privacy",
     "footer.copyright":
       "RPCIDE. All rights reserved. Built for competitive programmers, by competitive programmers.",
+    "about.title": "About RPCIDE",
+    "about.subtitle":
+      "RPCIDE is a cutting-edge online IDE tailored for competitive programming enthusiasts. Our mission is to empower coders worldwide with a platform that combines powerful coding tools, real-time collaboration, and a user-friendly interface.",
+    "about.mission.title": "Our Mission",
+    "about.mission.content":
+      "To provide an unparalleled coding environment that fosters learning, competition, and growth for programmers of all levels.",
+    "about.vision.title": "Our Vision",
+    "about.vision.content":
+      "To be the go-to platform for competitive programming, inspiring innovation and excellence in the coding community.",
+    "about.values.title": "Our Values",
+    "about.values.content":
+      "Innovation, Community, Excellence, Accessibility, and Continuous Learning.",
   },
   es: {
     title: "Online IDE de Programación Competitiva",
@@ -102,11 +115,24 @@ export const ui = {
     "footer.community.blog": "Blog",
     "footer.community.forum": "Foro",
     "footer.support": "Soporte",
+    "footer.support.about": "Acerca de",
     "footer.support.contact": "Contacto",
     "footer.support.status": "Estado",
     "footer.support.privacy": "Privacidad",
     "footer.copyright":
       "RPCIDE. Todos los derechos reservados. Construido para programadores competitivos, por programadores competitivos.",
+    "about.title": "Acerca de RPCIDE",
+    "about.subtitle":
+      "RPCIDE es un IDE en línea de vanguardia diseñado para entusiastas de la programación competitiva. Nuestra misión es empoderar a los programadores de todo el mundo con una plataforma que combina herramientas de codificación poderosas, colaboración en tiempo real y una interfaz fácil de usar.",
+    "about.mission.title": "Nuestra Misión",
+    "about.mission.content":
+      "Proporcionar un entorno de codificación inigualable que fomente el aprendizaje, la competencia y el crecimiento para programadores de todos los niveles.",
+    "about.vision.title": "Nuestra Visión",
+    "about.vision.content":
+      "Ser la plataforma de referencia para la programación competitiva, inspirando innovación y excelencia en la comunidad de codificación.",
+    "about.values.title": "Nuestros Valores",
+    "about.values.content":
+      "Innovación, Comunidad, Excelencia, Accesibilidad y Aprendizaje Continuo.",
   },
   pt: {
     title: "IDE de Programação Competitiva Online",
@@ -152,10 +178,23 @@ export const ui = {
     "footer.community.blog": "Blog",
     "footer.community.forum": "Fórum",
     "footer.support": "Suporte",
+    "footer.support.about": "Sobre",
     "footer.support.contact": "Contato",
     "footer.support.status": "Status",
     "footer.support.privacy": "Privacidade",
     "footer.copyright":
       "RPCIDE. Todos os direitos reservados. Construído para programadores competitivos, por programadores competitivos.",
+    "about.title": "Sobre o RPCIDE",
+    "about.subtitle":
+      "RPCIDE é um IDE online de ponta voltado para entusiastas de programação competitiva. Nossa missão é capacitar programadores em todo o mundo com uma plataforma que combina ferramentas de codificação poderosas, colaboração em tempo real e uma interface amigável.",
+    "about.mission.title": "Nossa Missão",
+    "about.mission.content":
+      "Fornecer um ambiente de codificação incomparável que promova aprendizado, competição e crescimento para programadores de todos os níveis.",
+    "about.vision.title": "Nossa Visão",
+    "about.vision.content":
+      "Ser a plataforma de referência para programação competitiva, inspirando inovação e excelência na comunidade de codificação.",
+    "about.values.title": "Nossos Valores",
+    "about.values.content":
+      "Inovação, Comunidade, Excelência, Acessibilidade e Aprendizado Contínuo.",
   },
 } as const;

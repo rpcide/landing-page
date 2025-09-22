@@ -12,6 +12,10 @@ export function getStaticPaths() {
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const features = t("about.features.content")
+  .split(";")
+  .filter((f) => f.trim().length > 0);
 ---
 
 <Layout
@@ -19,10 +23,12 @@ const t = useTranslations(lang);
   description={t("about.subtitle")}
   className="max-w-full !px-0 !mb-0"
 >
-  <section class="relative z-10 container mx-auto max-w-6xl py-20 px-4 grid gap-16">
+  <section
+    class="relative z-10 container mx-auto max-w-6xl py-20 px-4 grid gap-16"
+  >
     <div>
       <h2 class="text-3xl font-bold mb-4">{t("about.title")}</h2>
-      <p class="mb-8 text-muted-foreground">{t("about.subtitle")}</p>
+      <p class="mb-8 text-muted-foreground text-lg">{t("about.subtitle")}</p>
 
       <div class="aspect-video mb-8 rounded-lg overflow-hidden">
         <iframe
@@ -31,15 +37,22 @@ const t = useTranslations(lang);
           height="100%"
           src="https://www.youtube.com/embed/O4yYDZo8McM"
           title="YouTube video player"
-          allowFullScreen
+          allowfullscreen
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
       </div>
+
+      <h3 class="text-2xl font-semibold mt-8 mb-4">
+        {t("about.features.title")}
+      </h3>
+      <ul class="list-disc list-inside mt-4 space-y-2 text-muted-foreground text-lg">
+        {features.map((feature) => <li>{feature.trim()}</li>)}
+      </ul>
     </div>
 
     <div>
       <h2 class="text-3xl font-bold mb-4">{t("about.vision.title")}</h2>
-      <p class="mb-8 text-muted-foreground">{t("about.vision.content")}</p>
+      <p class="mb-8 text-muted-foreground text-lg">{t("about.vision.content")}</p>
 
       <div class="aspect-video mb-8 rounded-lg overflow-hidden">
         <img
@@ -53,7 +66,7 @@ const t = useTranslations(lang);
 
     <div>
       <h2 class="text-3xl font-bold mb-4">{t("about.values.title")}</h2>
-      <p class="mb-8 text-muted-foreground">{t("about.values.content")}</p>
+      <p class="mb-8 text-muted-foreground text-lg">{t("about.values.content")}</p>
 
       <div class="aspect-video mb-8 rounded-lg overflow-hidden">
         <img

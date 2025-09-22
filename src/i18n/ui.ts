@@ -70,6 +70,9 @@ export const ui = {
     "about.values.title": "Our Values",
     "about.values.content":
       "Innovation, Community, Excellence, Accessibility, and Continuous Learning.",
+    "about.features.title": "Key Features",
+    "about.features.content":
+      "This IDE is free. Our goal is to provide a free platform for students and teachers. We want to help you learn and improve your programming skills. If you want to help us you can donate; RPCIDE is an IDE focused on competitive programming. This IDE goes beyond conventional IDEs, as it is tuned to meet the unique needs of competitive programming; One of the key features of RPCIDE is its integration with programming languages commonly used in programming competitions including Java, Javascript, Python, C++ and Go;",
   },
   es: {
     title: "Online IDE de Programación Competitiva",
@@ -133,6 +136,9 @@ export const ui = {
     "about.values.title": "Nuestros Valores",
     "about.values.content":
       "Innovación, Comunidad, Excelencia, Accesibilidad y Aprendizaje Continuo.",
+    "about.features.title": "Características Clave",
+    "about.features.content":
+      "Este IDE es gratuito. Nuestro objetivo es ofrecer una plataforma gratuita para estudiantes y profesores. Queremos ayudarte a aprender y mejorar tus habilidades de programación. Si quieres ayudarnos puedes hacer una donación; El RPCIDE es un IDE enfocado en la programación competitiva. Este IDE va más allá de los IDEs convencionales, ya que está ajustado para satisfacer las necesidades únicas de la programación competitiva; Una de las características clave del RPCIDE es su integración con los lenguajes de programación comúnmente utilizados en competencias de programación entre los que se encuentran Java, Javascript, Python, C++ y Go;",
   },
   pt: {
     title: "IDE de Programação Competitiva Online",
@@ -196,5 +202,8 @@ export const ui = {
     "about.values.title": "Nossos Valores",
     "about.values.content":
       "Inovação, Comunidade, Excelência, Acessibilidade e Aprendizado Contínuo.",
+    "about.features.title": "Recursos Principais",
+    "about.features.content":
+      "Este IDE é gratuito. Nosso objetivo é fornecer uma plataforma gratuita para estudantes e professores. Queremos ajudá-lo a aprender e melhorar suas habilidades de programação. Se você quiser nos ajudar, pode fazer uma doação; O RPCIDE é um IDE focado em programação competitiva. Este IDE vai além dos IDEs convencionais, pois é ajustado para atender às necessidades únicas da programação competitiva; Um dos principais recursos do RPCIDE é sua integração com as linguagens de programação comumente usadas em competições de programação, incluindo Java, Javascript, Python, C++ e Go;",
   },
 } as const;

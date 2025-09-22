@@ -8,15 +8,18 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<footer
-  class="relative z-10 px-4 py-12 backdrop-blur-sm"
->
+<footer class="relative z-10 px-4 py-12 backdrop-blur-sm">
   <div class="container mx-auto max-w-6xl">
     <div class="grid md:grid-cols-4 gap-8">
       <div class="space-y-4">
         <div class="flex items-center space-x-2">
           <div class="w-10 h-10 rounded-lg flex items-center justify-center">
-            <img src="/logo.webp" alt="Logo RPCIDE" class="h-10 w-10" title="RPCIDE" />
+            <img
+              src="/logo.webp"
+              alt="Logo RPCIDE"
+              class="h-10 w-10"
+              title="RPCIDE"
+            />
           </div>
           <h4 class="text-xl font-bold">RPCIDE</h4>
         </div>
@@ -34,7 +37,7 @@ const t = useTranslations(lang);
         <h3 class="font-semibold mb-4">{t("footer.product")}</h3>
         <ul class="space-y-2 text-sm text-muted-foreground">
           <li>
-            <Link href="/features" className="transition-colors">
+            <Link href="/#features" className="transition-colors">
               {t("footer.product.features")}
             </Link>
           </li>
@@ -60,17 +63,47 @@ const t = useTranslations(lang);
         <h3 class="font-semibold mb-4">{t("footer.community")}</h3>
         <ul class="space-y-2 text-sm text-muted-foreground">
           <li>
-            <a href="https://discord.gg/rpcide" class="transition-colors">
+            <a
+              href="https://www.linkedin.com/company/rpcide"
+              class="transition-colors"
+              target="_blank"
+            >
+              Linkedin
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://x.com/rpcide"
+              class="transition-colors"
+              target="_blank"
+            >
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://discord.gg/rpcide"
+              class="transition-colors"
+              target="_blank"
+            >
               Discord
             </a>
           </li>
           <li>
-            <a href="https://github.com/rpcide" class="transition-colors">
+            <a
+              href="https://github.com/rpcide"
+              class="transition-colors"
+              target="_blank"
+            >
               GitHub
             </a>
           </li>
           <li>
-            <a href="https://blog.rpcide.cloud" class="transition-colors">
+            <a
+              href="https://blog.rpcide.cloud"
+              class="transition-colors"
+              target="_blank"
+            >
               Blog
             </a>
           </li>
@@ -80,6 +113,11 @@ const t = useTranslations(lang);
       <div>
         <h3 class="font-semibold mb-4">{t("footer.support")}</h3>
         <ul class="space-y-2 text-sm text-muted-foreground">
+          <li>
+            <Link href="/about" className=" transition-colors">
+              {t("footer.support.about")}
+            </Link>
+          </li>
           <li>
             <Link href="/contact" className=" transition-colors">
               {t("footer.support.contact")}

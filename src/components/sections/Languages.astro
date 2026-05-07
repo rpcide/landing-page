@@ -17,6 +17,8 @@ const languages = [
   },
   { name: "Go", icon: "/assets/golang.png", color: "bg-purple-800" },
   { name: "C#", icon: "/assets/csharp.png", color: "bg-purple-800" },
+  { name: "Rust", icon: "/assets/rust.png", color: "bg-purple-800" },
+  { name: "Kotlin", icon: "/assets/kotlin.png", color: "bg-purple-800" },
 ];
 ---
 
@@ -40,7 +42,7 @@ const languages = [
           >
             <CardContent className="p-6 text-center">
               <div
-                class={`w-12 h-12 ${lang.color} rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform text-xl shadow-2xl shadow-purple-500`}
+                class={`w-12 h-12 ${lang.color} rounded flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform text-xl shadow-2xl`}
               >
                 <img
                   src={lang.icon}

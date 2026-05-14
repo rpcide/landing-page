@@ -9,7 +9,7 @@ const t = useTranslations(lang);
 
 <section
   id="cta"
-  class="px-4 pt-20 pb-60 bg-gradient-to-r from-purple-600/5 to-purple-700/5 backdrop-blur-sm relative"
+  class="px-4 pt-20 pb-60 bg-gradient-to-r from-primary/5 to-primary/5 backdrop-blur-sm relative"
 >
   <div class="container mx-auto max-w-2xl text-center">
     <div class="space-y-6">
@@ -25,7 +25,7 @@ const t = useTranslations(lang);
       >
         <a href="https://app.rpcide.cloud" target="_blank">
           <Button
-            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300"
+            className="text-white px-8 py-3 transition-all duration-300"
           >
             <ArrowRight class="w-5 h-5" />
             {t("cta.button")}
@@ -41,7 +41,7 @@ const t = useTranslations(lang);
     background: radial-gradient(
       125% 125% at 50% 10%,
       var(--color-background) 40%,
-      #2b092b 100%
+      var(--color-primary) 100%
     );
   }
 </style>

@@ -6,19 +6,19 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const languages = [
-  { name: "C", icon: "/assets/c.png", color: "bg-purple-800" },
-  { name: "C++", icon: "/assets/cplus.png", color: "bg-purple-800" },
-  { name: "Java", icon: "/assets/java.png", color: "bg-purple-800" },
-  { name: "Python", icon: "/assets/python.png", color: "bg-purple-800" },
+  { name: "C", icon: "/assets/c.png", color: "" },
+  { name: "C++", icon: "/assets/cplus.png", color: "" },
+  { name: "Java", icon: "/assets/java.png", color: "" },
+  { name: "Python", icon: "/assets/python.png", color: "" },
   {
     name: "JavaScript",
     icon: "/assets/javascript.png",
-    color: "bg-purple-800",
+    color: "",
   },
-  { name: "Go", icon: "/assets/golang.png", color: "bg-purple-800" },
-  { name: "C#", icon: "/assets/csharp.png", color: "bg-purple-800" },
-  { name: "Rust", icon: "/assets/rust.png", color: "bg-purple-800" },
-  { name: "Kotlin", icon: "/assets/kotlin.png", color: "bg-purple-800" },
+  { name: "Go", icon: "/assets/golang.png", color: "" },
+  { name: "C#", icon: "/assets/csharp.png", color: "" },
+  { name: "Rust", icon: "/assets/rust.png", color: "" },
+  { name: "Kotlin", icon: "/assets/kotlin.png", color: "" },
 ];
 ---
 
@@ -38,7 +38,7 @@ const languages = [
         languages.map((lang, index) => (
           <Card
             key={index}
-            className="bg-card border backdrop-blur-sm hover:bg-white/[0.04] transition-all duration-300 group cursor-pointer hover:shadow-2xl hover:shadow-purple-500/20"
+            className="bg-card border backdrop-blur-sm hover:bg-white/[0.04] transition-all duration-300 group cursor-pointer hover:shadow-2xl hover:shadow-primary/20"
           >
             <CardContent className="p-6 text-center">
               <div
@@ -47,7 +47,7 @@ const languages = [
                 <img
                   src={lang.icon}
                   alt={`${lang.name} icon`}
-                  class="w-8 h-8"
+                  class="w-10 h-10"
                 />
               </div>
 

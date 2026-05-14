@@ -36,7 +36,7 @@ export default function AnimatedBackground({
   return (
     <>
       <div className={`absolute top-0 bottom-0 left-0 right-0 inset-0 overflow-hidden z-0 ${className}`}>
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-purple-800/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5"></div>
 
         <div className="absolute inset-0 opacity-20">
           <div
@@ -66,7 +66,7 @@ export default function AnimatedBackground({
             }}
           >
             <div
-              className="w-16 h-16 border border-purple-500 dark:border-purple-500/30 rotate-45"
+              className="w-16 h-16 border border-primary dark:border-primary/30 rotate-45"
               style={{
                 background:
                   "linear-gradient(45deg, rgba(147, 51, 234, 0.1), transparent)",
@@ -98,7 +98,7 @@ export default function AnimatedBackground({
         {[...Array(codeParticleCount)].map((_, i) => (
           <div
             key={`particle-${i}`}
-            className="absolute text-purple-400/60 font-mono text-xs"
+            className="absolute text-primary/60 font-mono text-xs"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,

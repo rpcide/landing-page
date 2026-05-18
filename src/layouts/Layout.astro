@@ -11,6 +11,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../global.css";
 import { getLangFromUrl, getLocaleFromLang } from "../i18n/utils";
+import Analytics from "@vercel/analytics/astro";
 
 const { title, description, cover, className } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
@@ -70,7 +71,7 @@ const alternateLinks = [
         <link rel="alternate" href={link.href} hreflang={link.hreflang} />
       ))
     }
-<!-- 
+    <!-- 
     <script is:inline>
       const getThemePreference = () => {
         if (
@@ -97,6 +98,7 @@ const alternateLinks = [
         });
       }
     </script> -->
+    <Analytics />
   </head>
 
   <body>

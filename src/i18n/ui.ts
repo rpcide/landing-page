@@ -9,6 +9,7 @@ export const showDefaultLang = true;
 
 export const ui = {
   en: {
+    domain_change_info: "The domain has changed to rpcide.com",
     title: "Online Competitive Programming IDE",
     description:
       "The ultimate platform for competitive programming and algorithmic problem solving.",
@@ -80,6 +81,7 @@ export const ui = {
     "contact.email.placeholder": "For business inquiries, please reach out to",
   },
   es: {
+    domain_change_info: "El dominio ha cambiado a rpcide.com",
     title: "Online IDE de Programación Competitiva",
     description:
       "La plataforma definitiva para la programación competitiva y la resolución de problemas algorítmicos.",
@@ -152,6 +154,7 @@ export const ui = {
       "Para consultas comerciales, por favor contacta a",
   },
   pt: {
+    domain_change_info: "O domínio mudou para rpcide.com",
     title: "IDE de Programação Competitiva Online",
     description:
       "A plataforma definitiva para programação competitiva e resolução de problemas algorítmicos.",

@@ -1,6 +1,6 @@
 const config = {
-  apiUrl: "https://api.rpcide.cloud",
-  appUrl: "https://app.rpcide.cloud",
+  apiUrl: "https://api.rpcide.com",
+  appUrl: "https://app.rpcide.com",
   supportEmail: "rpcideofficial@gmail.com",
 };
 

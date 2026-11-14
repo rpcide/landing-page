@@ -34,6 +34,7 @@ URLs and contact details are in [src/config.ts](src/config.ts). The app and API 
 | :--------------- | :----------------------- |
 | `PUBLIC_APP_URL` | `https://app.rpcide.com` |
 | `PUBLIC_API_URL` | `https://api.rpcide.com` |
+| `PUBLIC_BLOG_URL` | `https://blog.rpcide.com` |
 
 The canonical site URL (used for the sitemap) is `site` in [astro.config.mjs](astro.config.mjs). Change both if you deploy your own copy.
 

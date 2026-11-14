@@ -22,4 +22,4 @@ The shared project guidance (stack, commands, layout, conventions, commits) live
 ### Notes
 
 - `tailwild.config.js` at the root is an empty legacy file (typo in the name); Tailwind v4 is configured in `src/global.css`. Do not populate it.
-- Production domain is `rpcide.cloud`; app and API URLs are in `src/config.ts`.
+- Production domain is `rpcide.com`; app and API URLs are in `src/config.ts`.

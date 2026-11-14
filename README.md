@@ -68,7 +68,7 @@ public/                      # Static assets, favicon, robots.txt
 
 ## Contributing
 
-See the [contributing guide](https://github.com/rpcide/.github/blob/main/CONTRIBUTING.md). Run `npm run build` before opening a pull request.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Run `npm run build` before opening a pull request.
 
 ## License
 

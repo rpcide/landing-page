@@ -1,6 +1,6 @@
 # RPCIDE Landing Page
 
-The marketing site of [RPCIDE](https://github.com/rpcide), live at [rpcide.cloud](https://rpcide.cloud). It presents the project and links to the [web app](https://github.com/rpcide/rpcide).
+The marketing site of [RPCIDE](https://github.com/rpcide), live at [rpcide.com](https://rpcide.com). It presents the project and links to the [web app](https://github.com/rpcide/rpcide).
 
 ## Tech stack
 
@@ -32,8 +32,8 @@ The site needs no environment variables. URLs and contact details are in [src/co
 
 ```ts
 const config = {
-  apiUrl: "https://api.rpcide.cloud",
-  appUrl: "https://app.rpcide.cloud",
+  apiUrl: "https://api.rpcide.com",
+  appUrl: "https://app.rpcide.com",
   supportEmail: "rpcideofficial@gmail.com",
 };
 ```

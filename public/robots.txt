@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rpcide.cloud/sitemap-index.xml
+Sitemap: https://rpcide.com/sitemap-index.xml

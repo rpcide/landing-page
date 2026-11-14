@@ -9,7 +9,7 @@ describe("LanguageToggle", () => {
   let href: string;
 
   beforeEach(() => {
-    href = "https://rpcide.cloud/es";
+    href = "https://rpcide.com/es";
     // jsdom does not implement navigation; capture the assignment instead.
     vi.stubGlobal("location", {
       get href() {
@@ -48,6 +48,6 @@ describe("LanguageToggle", () => {
   it("does not navigate when the current language is selected", async () => {
     const user = await open("es");
     await user.click(await screen.findByRole("menuitemradio", { name: "Español" }));
-    expect(href).toBe("https://rpcide.cloud/es");
+    expect(href).toBe("https://rpcide.com/es");
   });
 });

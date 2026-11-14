@@ -7,7 +7,7 @@ import {
   useTranslations,
 } from "./utils";
 
-const url = (path: string) => new URL(path, "https://rpcide.cloud");
+const url = (path: string) => new URL(path, "https://rpcide.com");
 
 describe("getLangFromUrl", () => {
   it.each([

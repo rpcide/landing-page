@@ -4,7 +4,7 @@ Guidance for AI coding agents working in this repository.
 
 ## Project
 
-RPCIDE landing page: a static-first marketing site for an online competitive programming IDE. Deployed on Vercel at `https://rpcide.cloud`.
+RPCIDE landing page: a static-first marketing site for an online competitive programming IDE. Deployed on Vercel at `https://rpcide.com`.
 
 ## Stack
 

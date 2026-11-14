@@ -13,7 +13,7 @@ describe("Link.astro", () => {
     container.renderToString(Link, {
       props,
       slots: { default: "About" },
-      request: new Request(`https://rpcide.cloud${path}`),
+      request: new Request(`https://rpcide.com${path}`),
     });
 
   it.each([

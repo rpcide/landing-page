@@ -1,7 +1,9 @@
 ---
+import config from "@/config";
+
 export const prerender = false;
 
 const { slug } = Astro.params;
 
-return Astro.redirect(`https://app.rpcide.cloud/shared/${slug}`);
+return Astro.redirect(`${config.appUrl}/shared/${slug}`);
 ---

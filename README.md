@@ -28,15 +28,12 @@ Open http://localhost:4321.
 
 ## Configuration
 
-The site needs no environment variables. URLs and contact details are in [src/config.ts](src/config.ts):
+URLs and contact details are in [src/config.ts](src/config.ts). The app and API URLs can be overridden with environment variables (see [.env.example](.env.example)); without them the defaults below are used:
 
-```ts
-const config = {
-  apiUrl: "https://api.rpcide.com",
-  appUrl: "https://app.rpcide.com",
-  supportEmail: "rpcideofficial@gmail.com",
-};
-```
+| Variable         | Default                  |
+| :--------------- | :----------------------- |
+| `PUBLIC_APP_URL` | `https://app.rpcide.com` |
+| `PUBLIC_API_URL` | `https://api.rpcide.com` |
 
 The canonical site URL (used for the sitemap) is `site` in [astro.config.mjs](astro.config.mjs). Change both if you deploy your own copy.
 

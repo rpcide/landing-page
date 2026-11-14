@@ -1,0 +1,69 @@
+name: Release
+
+# Manual release: Actions -> Release -> Run workflow (from main).
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: "Version bump (auto = derived from commits)"
+        type: choice
+        default: auto
+        options: [auto, patch, minor, major]
+      dry_run:
+        description: "Preview only; do not commit, tag or publish"
+        type: boolean
+        default: false
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history + tags, required to compute the bump
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Preview
+        if: inputs.dry_run
+        run: node scripts/release.mjs "${{ inputs.bump }}" --dry-run | tee "$GITHUB_STEP_SUMMARY"
+
+      - name: Bump version, update changelog, commit and tag
+        if: "!inputs.dry_run"
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          node scripts/release.mjs "${{ inputs.bump }}"
+
+      - name: Push commit and tag
+        if: "!inputs.dry_run"
+        run: git push origin HEAD:main --follow-tags
+
+      - name: Create GitHub Release
+        if: "!inputs.dry_run"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="$(git describe --tags --abbrev=0)"
+          version="${tag#v}"
+          # Extract this version's section from CHANGELOG.md as release notes.
+          awk -v v="$version" '
+            $0 ~ "^## \\[" v "\\]" { f=1; next }
+            f && /^## \[/ { exit }
+            f { print }
+          ' CHANGELOG.md > release-notes.md
+          gh release create "$tag" --title "$tag" --notes-file release-notes.md

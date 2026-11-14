@@ -49,6 +49,14 @@ git push --follow-tags  # publish the commit and tag
 
 It never pushes. Release from the `main` branch only.
 
+### Releasing with GitHub Actions (recommended)
+
+Go to **Actions → Release → Run workflow** on `main` and pick the bump (`auto`, `patch`, `minor`, `major`). Tick `dry_run` to only preview the version and changelog in the job summary.
+
+The workflow (`.github/workflows/release.yml`) builds the site, runs `scripts/release.mjs`, pushes the `chore(release)` commit and the `vX.Y.Z` tag to `main`, and publishes a GitHub Release using the matching `CHANGELOG.md` section as notes. If `main` is protected, allow `github-actions[bot]` to bypass the rule, or the push will fail.
+
+`.github/workflows/ci.yml` runs `astro check` and `npm run build` on every PR, and requires PR titles to be Conventional Commits (they become the squash-merge commit subject that drives the version bump).
+
 ## Rules
 
 - Never edit the version in `package.json` or `CHANGELOG.md` by hand; use the release script.

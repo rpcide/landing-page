@@ -23,9 +23,20 @@ RPCIDE landing page: a static-first marketing site for an online competitive pro
 | `npm run build`        | Production build into `dist/`            |
 | `npm run preview`      | Preview the production build             |
 | `npx astro check`      | Type-check Astro/TS files                |
+| `npm test`             | Run unit tests once (Vitest)             |
+| `npm run test:watch`   | Run unit tests in watch mode             |
+| `npm run test:coverage`| Run unit tests with a coverage report    |
 | `npm run release:dry`  | Preview the next version and changelog   |
 
-There is no test suite or linter. Before finishing a change, run `npm run build` (and `npx astro check` for TS changes).
+There is no linter. Before finishing a change, run `npm test` and `npm run build` (and `npx astro check` for TS changes).
+
+## Tests
+
+- Vitest, configured in `vitest.config.ts` via Astro's `getViteConfig` (so the `@/` alias and `.astro` imports work). CI runs them in `.github/workflows/test.yml`.
+- Put tests next to the code as `*.test.ts` / `*.test.tsx`. React components use Testing Library; add `// @vitest-environment jsdom` at the top of DOM tests (the default environment is Node).
+- Test `.astro` components with the Astro Container API (see `src/components/Link.test.ts`).
+- `src/i18n/ui.test.ts` fails if a locale is missing a key or has an empty string, so add every new string to `en`, `es` and `pt`.
+- `scripts/release.test.ts` runs the release script with `--dry-run` in temporary git repos.
 
 ## Project layout
 

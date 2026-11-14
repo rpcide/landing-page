@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://rpcide.cloud/sitemap-index.xml
